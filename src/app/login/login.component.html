@@ -1,0 +1,37 @@
+<div class="container" ng-app="ContactForm">
+  
+<form (ngSubmit)="checkUser()">
+  <table >
+    <legend>
+      <fieldset>
+        <tr>
+          <td>Username:</td>
+          <td>
+            <input
+              type="text"
+              name="C_emailid"
+              required
+              [(ngModel)]="customer.C_emailid"
+              placeholder="Username"
+            />
+          </td>
+        </tr>
+        <tr>
+          <td>Password:</td>
+          <td>
+            <input
+              type="password"
+              name="C_password"
+              [(ngModel)]="customer.C_password"
+              placeholder="password"
+            />
+          </td>
+        </tr>
+        <tr>
+          <button class="btn btn-primary" routerLink="/">submit</button>
+        </tr>
+      </fieldset>
+    </legend>
+  </table>
+</form>
+</div>

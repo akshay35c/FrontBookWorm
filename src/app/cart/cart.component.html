@@ -1,0 +1,21 @@
+<!--The content below is only a placeholder and can be replaced.-->
+
+<h1><b>MY CART</b></h1>
+<div class="table-responsive">
+  <table class="table table-sm" style="position: relative" >
+    <tr>
+      <th>Product Name</th>
+      <th>Product price</th>
+      <th>Delete Option</th>
+    </tr>
+    <tr *ngFor ="let com of lstuser ">
+      <td>{{com.P_name}}</td>
+      <td>{{com.P_SP}}</td>
+      <button (click)="delfromcart(com)">Delete</button>
+    </tr>
+  </table>
+  <button (click)="calmoney()">Total price<h2>{{total}}</h2></button><br><br>
+<button routerLink="/logout">
+  Check out
+</button>
+</div>

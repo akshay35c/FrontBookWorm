@@ -1,0 +1,32 @@
+<h3>Sign Up</h3>
+<body>
+    <style type="text/css">
+      .fieldset-auto-width {
+           display: inline-block;
+      }
+  </style>
+  <form  #f="ngForm" (ngSubmit)="addCustomer(f.form)" id="dummyForm">
+    <fieldset  class="fieldset-auto-width">
+      <pre>
+      First Name:
+      <input type="text"  required [(ngModel)]="customer.C_fname" name="C_fname">
+      Last Name:
+      <input type="text"  required [(ngModel)]="customer.C_lname" name="C_lname">
+      Password:
+      <input type="text"  required [(ngModel)]="customer.C_password" name="C_password">
+      Email:
+      <input type="text"  required [(ngModel)]="customer.C_emailid" name="C_emailid">
+      Contact:
+      <input type="text"  required [(ngModel)]="customer.C_contact" name="C_contact">
+      City:
+      <input type="text"  required [(ngModel)]="customer.C_city" name="C_city">
+      Country:
+      <input type="text"  required [(ngModel)]="customer.C_country" name="C_country">
+      <br>
+      <input type="submit" value="Add"/>
+    </pre>
+  </fieldset>
+  </form>
+
+</body>
+

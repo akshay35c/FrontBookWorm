@@ -1,0 +1,28 @@
+<!--The content below is only a placeholder and can be replaced.-->
+<div class="table-responsive">
+  <table class="table table-sm" style="position: relative" >
+    <tr>
+      <th>id</th>
+      <th>firstname</th>
+      <th>lastname</th>
+      <th>town</th>
+      <th>email</th>
+      <th>phone</th>
+      <th>state</th>
+      <th>password</th>
+    </tr>
+    <tr *ngFor ="let com of lstuser">
+      <td>{{com.cust_id}}</td>
+      <!--<td>{{com|json}}</td>-->
+      <td>{{com.C_fname}}</td>
+      <td>{{com.C_lname}}</td>
+      <td>{{com.C_city}}</td>
+      <td>{{com.C_emailid}}</td>
+      <td>{{com.C_contact}}</td>
+      <td>{{com.C_country}}</td>
+      <td>{{com.C_password}}</td>
+    </tr>
+  </table>
+</div>
+
+<router-outlet></router-outlet>

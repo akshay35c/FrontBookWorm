@@ -1,0 +1,199 @@
+<!-- <div class="container">
+  <h5>Registration Form</h5>
+  <form [formGroup]="rf" (ngSubmit)="onSubmit(rf)">
+    <div class="form-group">
+      <label>First Name </label>
+      <input formControlName="C_fname" type="text" class="form-control" />
+      <div *ngIf="C_fname.invalid && (C_fname.touched || submitted)">
+        <label *ngIf="C_fname.hasError('required')" class="c1"
+          >First Name is required</label
+        >
+        <span
+          *ngIf="
+            rf.get('C_fname').hasError('minlength') ||
+            rf.get('C_fname').hasError('maxlength')
+          "
+          class="c1"
+        >
+          FirstName must be 2 character and max 10 character
+        </span>
+      </div>
+    </div>
+    <div class="form-group">
+      <label>Last Name </label>
+      <input formControlName="C_lname" type="text" class="form-control" />
+      <div *ngIf="C_lname.invalid && (C_lname.touched || submitted)">
+        <label *ngIf="C_lname.hasError('required')" class="c1"
+          >Last Name is required</label
+        >
+      </div>
+    </div>
+
+    <div class="form-group">
+      <label>Email</label>
+      <input formControlName="C_emailid" type="email" class="form-control" />
+      <div *ngIf="C_emailid.invalid && (C_emailid.touched || submitted)">
+        <label *ngIf="C_emailid.hasError('required')" class="c1"
+          >Email is required</label
+        >
+        <span *ngIf="rf.get('C_emailid').hasError('C_emailid')" class="c1">
+          Enter Valid Email Id
+        </span>
+      </div>
+    </div>
+
+    <div class="form-group">
+      <label>Password </label>
+      <input
+        formControlName="C_password"
+        type="password"
+        class="form-control"
+      />
+      <div *ngIf="C_password.invalid && (C_password.touched || submitted)">
+        <label *ngIf="C_password.hasError('required')" class="c1"
+          >Password is required</label
+        >
+        <span
+          *ngIf="
+            rf.get('C_password').hasError('minlength') ||
+            rf.get('C_password').hasError('maxlength')
+          "
+          class="c1"
+        >
+          Enter Vaild Password
+        </span>
+      </div>
+    </div>
+    <div class="form-group">
+      <label>City </label>
+      <input formControlName="C_city" type="text" class="form-control" />
+      <div *ngIf="C_city.invalid && (C_city.touched || submitted)">
+        <label *ngIf="C_city.hasError('required')" class="c1"
+          >City is required</label
+        >
+      </div>
+    </div>
+
+    <div class="form-group">
+      <label>Country </label>
+      <input formControlName="C_country" type="text" class="form-control" />
+      <div *ngIf="C_country.invalid && (C_country.touched || submitted)">
+        <label *ngIf="C_country.hasError('required')" class="c1"
+          >Country is required</label
+        >
+      </div>
+    </div>
+
+    <div class="form-group">
+      <label>Contact </label>
+      <input
+        formControlName="C_contact"
+        type="text"
+        pattern="[0-9]{10}"
+        class="form-control"
+      />
+      <div *ngIf="C_contact.invalid && (C_contact.touched || submitted)">
+        <label *ngIf="C_contact.hasError('required')" class="c1"
+          >Contact number is required</label
+        >
+        <span
+          *ngIf="
+            rf.get('C_contact').hasError('minlength') ||
+            rf.get('C_contact').hasError('maxlength')
+          "
+          class="c1"
+        >
+          Enter valid contact number!
+        </span>
+      </div>
+    </div>
+    <button class="btn btn-primary" type="submit">Register</button>&nbsp;
+    <button class="btn btn-primary" type="reset">Reset</button>
+  </form>
+  {{ rf.value | json }}
+</div> -->
+
+
+
+
+
+<div class="container">
+  <h5>Registration Form</h5>
+        <form [formGroup]="rf" (ngSubmit)="onSubmit(rf)">
+          <div class="form-group">
+                <label>First Name </label>
+                <input formControlName="C_fname" type="text" placeholder="Enter First Name" class="form-control" >
+                <div *ngIf="C_fname.invalid &&(C_fname.touched || submitted)">
+                    <label *ngIf="C_fname.errors.required" class="c1">First Name is required</label>
+                    <span *ngIf="rf.get('C_fname').errors.minlength||rf.get('C_fname').errors.maxlength" class="c1">
+                        FirstName must be 2 character and max 10 character
+                    </span>        
+                </div>
+            </div>
+            <div class="form-group">
+                    <label>Last Name </label>
+                    <input formControlName="C_lname" type="text" placeholder="Enter Last Name" class="form-control">
+                    <div *ngIf="C_lname.invalid &&(C_lname.touched || submitted)">
+                        <label *ngIf="C_lname.errors.required" class="c1">Last Name is required</label>
+                    </div>
+                    </div>
+
+
+                    <div class="form-group">
+                        <label>Email</label>
+                        <input formControlName="C_emailid" type="email" placeholder="Enter Emaild Id" class="form-control">
+                        <div *ngIf="C_emailid.invalid &&(C_emailid.touched || submitted)">
+                            <label *ngIf="C_emailid.errors.required" class="c1" >Email is required</label>
+                            <span *ngIf="rf.get('C_emailid').errors.C_emailid"class="c1">
+                                   Enter Valid Email Id
+                                </span>
+                        </div>
+                      </div>
+
+                 <div class="form-group">
+                <label>Password </label>
+                <input formControlName="C_password" type="password" placeholder="Enter Password" class="form-control">
+                <div *ngIf="C_password.invalid &&(C_password.touched || submitted)">
+                    <label *ngIf="C_password.errors.required" class="c1" >Password is required</label>
+                    <span *ngIf="rf.get('C_password').errors.minlength||rf.get('C_password').errors.maxlength" class="c1">
+                           Enter Vaild Password
+                        </span>
+
+                </div>
+                </div>
+             <div class="form-group">
+                    <label>City </label>
+                    <input formControlName="C_city" type="text" placeholder="Enter City" class="form-control">
+                    <div *ngIf="C_city.invalid &&(C_city.touched || submitted)">
+                        <label *ngIf="C_city.errors.required" class="c1">City is required</label>
+                    </div>
+                    </div>
+
+
+                    <div class="form-group">
+                        <label>Country </label>
+                        <input formControlName="C_country" type="text" placeholder="Enter Country" class="form-control">
+                        <div *ngIf="C_country.invalid &&(C_country.touched || submitted)">
+                            <label *ngIf="C_country.errors.required" class="c1">Country is required</label>
+                        </div>
+                        </div>
+
+
+                        <div class="form-group">
+                            <label>Contact </label>
+                            <input formControlName="C_contact" type="text" pattern="[0-9]{10}" placeholder="Enter Contact number" class="form-control">
+                            <div *ngIf="C_contact.invalid &&(C_contact.touched || submitted)">
+                                    <label *ngIf="C_contact.errors.required" class="c1">Contact number is required</label>
+                                    <span *ngIf="rf.get('C_contact').errors.minlength||rf.get('C_contact').errors.maxlength" class="c1">
+                                          Enter valid contact number!
+                                        </span>
+                                </div>
+                            </div>
+                            <button class="btn btn-primary" type="submit">Register</button>&nbsp;
+                            <button class="btn btn-primary" type="reset">Reset</button>
+           </form>
+<!--{{rf.value|json}}-->
+        </div>
+        
+       
+            

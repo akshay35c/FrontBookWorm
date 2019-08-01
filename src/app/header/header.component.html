@@ -1,0 +1,70 @@
+
+
+<nav class="navbar navbar-expand-sm navbar-light bg-grey">
+  <a class="navbar-brand" routerLink="/ProductdbDisplay" routerLinkActive="router-link-active" >BookWorm</a>
+
+  <button
+    class="navbar-toggler"
+    type="button"
+    data-toggle="collapse"
+    data-target="#navbarNavDropdown"
+    aria-controls="navbarNavDropdown"
+    aria-expanded="false"
+    aria-label="Toggle navigation"
+  >
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <div class="collapse navbar-collapse" id="navbarNavDropdown">
+    <ul class="navbar-nav">
+
+      <li class="nav-item active">
+        <a class="nav-link" routerLink="/ProductdbDisplay" routerLinkActive="router-link-active"
+          >Home <span class="sr-only">(current)</span></a>
+      </li>
+
+      <li ngbDropdown class="nav-item dropdown">
+        <a
+          ngbDropdownToggle
+          class="nav-link dropdown-toggle"
+          id="navbarDropdownMenuLink"
+          data-toggle="dropdown"
+          aria-haspopup="true"
+          aria-expanded="false">
+          Products
+        </a>
+        <div ngbDropdownMenu class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+            <a ngbDropdownItem class="dropdown-item" routerLink="/EbookDisplay" class="nav-link">Ebook</a>
+            <a ngbDropdownItem class="dropdown-item" routerLink="/AudioBookDisplay" class="nav-link">Audio Book</a>
+        </div>
+      </li>
+
+    
+          <li class="nav-item">
+            <a routerLink="/cart" class="nav-link">My Cart</a>
+          </li>
+
+          <li class="nav-item">
+            <a routerLink="/shelf" class="nav-link">My Shelf</a>
+          </li>
+
+          <li class="nav-item">
+              <a routerLink="/login" class="nav-link">Log In</a>
+            </li>
+    
+            <li class="nav-item">
+                <a routerLink="/register" class="nav-link">Register</a>
+              </li>
+
+              <li class="nav-item">
+                  <a routerLink="/contactus" class="nav-link">Contact Us</a>
+                </li>
+    </ul>
+  </div>
+</nav>
+<br>
+
+
+
+
+
